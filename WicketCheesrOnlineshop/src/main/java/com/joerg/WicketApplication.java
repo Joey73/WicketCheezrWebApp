@@ -5,7 +5,9 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
 import org.apache.wicket.request.Request;
 import org.apache.wicket.request.Response;
+import org.apache.wicket.settings.ExceptionSettings;
 
+import com.joerg.pages.ErrorPage;
 import com.joerg.pages.Index;
 
 import de.agilecoders.wicket.core.Bootstrap;
@@ -32,6 +34,8 @@ public class WicketApplication extends WebApplication {
 		super.init();
 		// add your configuration here
 		Bootstrap.install(this);
+		getExceptionSettings().setUnexpectedExceptionDisplay(ExceptionSettings.SHOW_INTERNAL_ERROR_PAGE);
+		getApplicationSettings().setInternalErrorPage(ErrorPage.class);
 	}
 
 	@Override
