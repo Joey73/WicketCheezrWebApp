@@ -1,0 +1,17 @@
+<wicket:extend>
+		<div class="col-md-6">
+			<h2>Our Selection</h2>
+			<div wicket:id="cheeses" class="cheese">
+				<h3 wicket:id="name"></h3>
+				<p wicket:id="description"></p>
+				<p>
+					<span wicket:id="price"></span> <a wicket:id="add" href="#">Add</a>
+				</p>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div wicket:id="cart"></div>
+			<input wicket:id="checkout" type="button" value="Check out"></input>
+		</div>
+</wicket:extend>
